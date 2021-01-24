@@ -20,7 +20,9 @@ const LaunchRequestHandler = {
     }
 };
 
-
+/**
+ * This is my custom intent
+ */
 const GetDateNumberHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
@@ -29,7 +31,8 @@ const GetDateNumberHandler = {
     handle(handlerInput) {
         const slotValue = handlerInput.requestEnvelope.request.intent.slots.date.value
         const number = helpers.getDateNumber(slotValue)
-        const speakOutput = `O número desse dia é ${number}`
+        const description = helpers.getNumberDescription(number)
+        const speakOutput = `O número desse dia é ${number}. ${description}`
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
