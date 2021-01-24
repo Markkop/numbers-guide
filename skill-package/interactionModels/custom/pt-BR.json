@@ -33,7 +33,7 @@
           "samples": []
         },
         {
-          "name": "GetDateNumber",
+          "name": "GetDateNumberIntent",
           "slots": [
             {
               "name": "date",
