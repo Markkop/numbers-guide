@@ -4,6 +4,7 @@
  * session persistence, api calls, and more.
  * */
 const Alexa = require('ask-sdk-core');
+const helpers = require('./helpers');
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
@@ -27,9 +28,8 @@ const GetDateNumberHandler = {
     },
     handle(handlerInput) {
         const slotValue = handlerInput.requestEnvelope.request.intent.slots.date.value
-        const dateNumbers = slotValue.replace(/\D/g, '').split('').map(Number)
-        const reducedNumber = dateNumbers.reduce((sum, number) => sum + number, 0)
-        const speakOutput = `O número desse dia é ${reducedNumber}`
+        const number = helpers.getDateNumber(slotValue)
+        const speakOutput = `O número desse dia é ${number}`
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
