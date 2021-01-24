@@ -23,7 +23,7 @@ const LaunchRequestHandler = {
 const GetDateNumberIntent = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'DateNumberIntent';
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'GetDateNumberIntent';
     },
     handle(handlerInput) {
         const slotValue = handlerInput.requestEnvelope.request.intent.slots.date.value
