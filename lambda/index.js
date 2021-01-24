@@ -20,7 +20,7 @@ const LaunchRequestHandler = {
 };
 
 
-const DateNumberIntentHandler = {
+const GetDateNumberIntent = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'DateNumberIntent';
@@ -164,7 +164,7 @@ exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
         HelloWorldIntentHandler,
-        DateNumberIntentHandler,
+        GetDateNumberIntent,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,
