@@ -19,6 +19,25 @@ const LaunchRequestHandler = {
     }
 };
 
+
+const DateNumberIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'DateNumberIntent';
+    },
+    handle(handlerInput) {
+        const slotValue = handlerInput.requestEnvelope.request.intent.slots.date.value
+        const dateNumbers = slotValue.replace(/\D/g, '').split('').map(Number)
+        const reducedNumber = dateNumbers.reduce((sum, number) => sum + number, 0)
+        const speakOutput = `O número desse dia é ${reducedNumber}`
+
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .getResponse();
+    }
+};
+
 const HelloWorldIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
@@ -145,6 +164,7 @@ exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
         HelloWorldIntentHandler,
+        DateNumberIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,
