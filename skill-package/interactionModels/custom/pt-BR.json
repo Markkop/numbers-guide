@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "o numerólogo",
+      "invocationName": "guia dos números",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -14,19 +14,6 @@
         {
           "name": "AMAZON.StopIntent",
           "samples": []
-        },
-        {
-          "name": "HelloWorldIntent",
-          "slots": [],
-          "samples": [
-            "olá",
-            "como vai você",
-            "diga oi mundo",
-            "diga oi",
-            "oi",
-            "diga olá mundo",
-            "diga olá"
-          ]
         },
         {
           "name": "AMAZON.NavigateHomeIntent",
@@ -52,5 +39,5 @@
       "types": []
     }
   },
-  "version": "2"
+  "version": "4"
 }
