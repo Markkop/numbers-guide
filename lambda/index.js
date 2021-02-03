@@ -48,7 +48,7 @@ const HelpIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.HelpIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'Você pode me perguntar o número de um dia. Que tal o de hoje?';
+        const speakOutput = 'Você pode me perguntar o número de um dia. Tente "Alexa, abra Guia dos Números e me diga o número de hoje".';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
