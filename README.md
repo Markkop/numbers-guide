@@ -5,7 +5,7 @@ Currently it's only available in pt-BR.
 
 # Get the Skill
 
-It's still under review
+https://www.amazon.com.br/Marcelo-Kopmann-Guia-dos-N%C3%BAmeros/dp/B08VWGQ7J3/
 
 # Usage
 
@@ -14,11 +14,17 @@ It's still under review
 "Alexa, pergunte Guida dos Números qual o número de hoje
 ```
 
-# Docs
+# How to develop
 
-All I did was following Amazon docs, here's some links worth to mention:
+```
+ask configure
+ask init --hosted-skill-id amzn1.ask.skill.316649f9-4d83-464f-a085-57620934aef1
+cd lambda && npm install && cd ..
+```
 
-* [Build Skills with the Alexa Skills Kit](https://developer.amazon.com/en-US/docs/alexa/ask-overviews/build-skills-with-the-alexa-skills-kit.html)
-* [Steps to Build a Custom Skill](https://developer.amazon.com/en-US/docs/alexa/custom-skills/steps-to-build-a-custom-skill.html)
-* [Create a Custom Skill from a Quick Start Template](https://developer.amazon.com/en-US/docs/alexa/custom-skills/create-custom-skill-from-quick-start-template.html)
-* [Get Started with the Alexa Skills Toolkit for Visual Studio Code](https://developer.amazon.com/en-US/docs/alexa/ask-toolkit/get-started-with-the-ask-toolkit-for-visual-studio-code.html)
+# References
+
+- [Build Skills with the Alexa Skills Kit](https://developer.amazon.com/en-US/docs/alexa/ask-overviews/build-skills-with-the-alexa-skills-kit.html)
+- [Steps to Build a Custom Skill](https://developer.amazon.com/en-US/docs/alexa/custom-skills/steps-to-build-a-custom-skill.html)
+- [Create a Custom Skill from a Quick Start Template](https://developer.amazon.com/en-US/docs/alexa/custom-skills/create-custom-skill-from-quick-start-template.html)
+- [Get Started with the Alexa Skills Toolkit for Visual Studio Code](https://developer.amazon.com/en-US/docs/alexa/ask-toolkit/get-started-with-the-ask-toolkit-for-visual-studio-code.html)
