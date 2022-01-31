@@ -22,6 +22,8 @@ ask init --hosted-skill-id amzn1.ask.skill.316649f9-4d83-464f-a085-57620934aef1
 cd lambda && npm install && cd ..
 ```
 
+Compiled folder "dist" have to be commited since this project is a Alexa-hosted skill (which is free) and therefore we have to build the javascript code before sending it to Amazon.
+
 # References
 
 - [Build Skills with the Alexa Skills Kit](https://developer.amazon.com/en-US/docs/alexa/ask-overviews/build-skills-with-the-alexa-skills-kit.html)

@@ -1,14 +1,11 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const ask_sdk_core_1 = __importDefault(require("ask-sdk-core"));
+const ask_sdk_core_1 = require("ask-sdk-core");
 const getDateNumber_1 = require("./helpers/getDateNumber");
 const getNumberDescription_1 = require("./helpers/getNumberDescription");
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
-        return ask_sdk_core_1.default.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
+        return (0, ask_sdk_core_1.getRequestType)(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
         const speakOutput = 'Olá, peça o número para uma data que eu lhe direi o seu valor.';
@@ -23,8 +20,8 @@ const LaunchRequestHandler = {
  */
 const GetDateNumberHandler = {
     canHandle(handlerInput) {
-        return ask_sdk_core_1.default.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && ask_sdk_core_1.default.getIntentName(handlerInput.requestEnvelope) === 'GetDateNumberIntent';
+        return (0, ask_sdk_core_1.getRequestType)(handlerInput.requestEnvelope) === 'IntentRequest'
+            && (0, ask_sdk_core_1.getIntentName)(handlerInput.requestEnvelope) === 'GetDateNumberIntent';
     },
     handle(handlerInput) {
         const request = handlerInput.requestEnvelope.request;
@@ -39,8 +36,8 @@ const GetDateNumberHandler = {
 };
 const HelpIntentHandler = {
     canHandle(handlerInput) {
-        return ask_sdk_core_1.default.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && ask_sdk_core_1.default.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.HelpIntent';
+        return (0, ask_sdk_core_1.getRequestType)(handlerInput.requestEnvelope) === 'IntentRequest'
+            && (0, ask_sdk_core_1.getIntentName)(handlerInput.requestEnvelope) === 'AMAZON.HelpIntent';
     },
     handle(handlerInput) {
         // eslint-disable-next-line max-len
@@ -53,9 +50,9 @@ const HelpIntentHandler = {
 };
 const CancelAndStopIntentHandler = {
     canHandle(handlerInput) {
-        return ask_sdk_core_1.default.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && (ask_sdk_core_1.default.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.CancelIntent'
-                || ask_sdk_core_1.default.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.StopIntent');
+        return (0, ask_sdk_core_1.getRequestType)(handlerInput.requestEnvelope) === 'IntentRequest'
+            && ((0, ask_sdk_core_1.getIntentName)(handlerInput.requestEnvelope) === 'AMAZON.CancelIntent'
+                || (0, ask_sdk_core_1.getIntentName)(handlerInput.requestEnvelope) === 'AMAZON.StopIntent');
     },
     handle(handlerInput) {
         const speakOutput = 'Adeus!';
@@ -71,8 +68,8 @@ const CancelAndStopIntentHandler = {
  * */
 const FallbackIntentHandler = {
     canHandle(handlerInput) {
-        return ask_sdk_core_1.default.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && ask_sdk_core_1.default.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.FallbackIntent';
+        return (0, ask_sdk_core_1.getRequestType)(handlerInput.requestEnvelope) === 'IntentRequest'
+            && (0, ask_sdk_core_1.getIntentName)(handlerInput.requestEnvelope) === 'AMAZON.FallbackIntent';
     },
     handle(handlerInput) {
         const speakOutput = 'Perdão, eu não sei isso. Tente de novo.';
@@ -89,7 +86,7 @@ const FallbackIntentHandler = {
  * */
 const SessionEndedRequestHandler = {
     canHandle(handlerInput) {
-        return ask_sdk_core_1.default.getRequestType(handlerInput.requestEnvelope) === 'SessionEndedRequest';
+        return (0, ask_sdk_core_1.getRequestType)(handlerInput.requestEnvelope) === 'SessionEndedRequest';
     },
     handle(handlerInput) {
         console.log(`~~~~ Session ended: ${JSON.stringify(handlerInput.requestEnvelope)}`);
@@ -104,10 +101,10 @@ const SessionEndedRequestHandler = {
  * */
 const IntentReflectorHandler = {
     canHandle(handlerInput) {
-        return ask_sdk_core_1.default.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest';
+        return (0, ask_sdk_core_1.getRequestType)(handlerInput.requestEnvelope) === 'IntentRequest';
     },
     handle(handlerInput) {
-        const intentName = ask_sdk_core_1.default.getIntentName(handlerInput.requestEnvelope);
+        const intentName = (0, ask_sdk_core_1.getIntentName)(handlerInput.requestEnvelope);
         const speakOutput = `Você acionou ${intentName}`;
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -138,7 +135,7 @@ const ErrorHandler = {
  * payloads to the handlers above. Make sure any new handlers or interceptors you've
  * defined are included below. The order matters - they're processed top to bottom
  * */
-exports.handler = ask_sdk_core_1.default.SkillBuilders.custom()
+exports.handler = ask_sdk_core_1.SkillBuilders.custom()
     .addRequestHandlers(LaunchRequestHandler, GetDateNumberHandler, HelpIntentHandler, CancelAndStopIntentHandler, FallbackIntentHandler, SessionEndedRequestHandler, IntentReflectorHandler)
     .addErrorHandlers(ErrorHandler)
     .withCustomUserAgent('sample/hello-world/v1.2')
