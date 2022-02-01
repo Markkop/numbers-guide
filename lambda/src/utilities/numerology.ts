@@ -1,3 +1,4 @@
+
 /* eslint-disable max-len */
 const numberDescription: Record<number, string> = {
   1: 'As pessoas que nasceram sob a influência da energia do número 1 possuem um instinto de liderança nato. São pessoas dadas à criatividade, ambiciosas e, por isso, podem ter traços de autoritarismo e egocentrismo aflorados. Estão sempre à frente dos projetos que se propõem a fazer, e podem ter dificuldades em aceitar sugestões.',
@@ -20,3 +21,28 @@ export function getNumberDescription(number: number): string {
   return numberDescription[number];
 }
 
+/**
+ * Splits a number received as text and sum its
+ * digits until there's only one
+ * @param { tring } numberText 
+ * @returns { String }
+ */
+ function splitAndSumNumbers(numberText: string): string {
+  const splittedNumbers = numberText.split('').map(Number)
+  const sum = String(splittedNumbers.reduce((sum: number, number: number) => sum + number, 0))
+  if (sum.length === 1) {
+      return sum
+  }
+  return splitAndSumNumbers(sum)
+}
+
+/**
+* Gets a single number for a given string date
+* @param { String } date such as 2021-12-19
+* @returns { Number } 
+*/
+export function getDateNumber(date: string) {
+  const dateNumbers = date.replace(/\D/g, '')
+  const sum = splitAndSumNumbers(dateNumbers)
+  return Number(sum)   
+}
