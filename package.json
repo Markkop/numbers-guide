@@ -4,7 +4,7 @@
   "description": "An Alexa Skill that provides numerology information about asked numbers and dates",
   "main": "index.js",
   "scripts": {
-    "test": "jest test/*",
+    "test": "npm run test --prefix lambda",
     "start": "npm run compile --prefix lambda && ask run",
     "deploy": "./scripts/script-deploy.sh"
   },
@@ -14,5 +14,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^27.4.0"
+  }
 }
