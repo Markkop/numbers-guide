@@ -20,6 +20,7 @@ https://www.amazon.com.br/Marcelo-Kopmann-Guia-dos-N%C3%BAmeros/dp/B08VWGQ7J3/
 ask configure
 ask init --hosted-skill-id amzn1.ask.skill.316649f9-4d83-464f-a085-57620934aef1
 cd lambda && npm install && cd ..
+git remote add github git@github.com:Markkop/numbers-guide.git
 ```
 
 Compiled folder "dist" have to be commited since this project is a Alexa-hosted skill (which is free) and therefore we have to build the javascript code before sending it to Amazon.
