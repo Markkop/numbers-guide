@@ -5,7 +5,6 @@ import { isIntent } from '../../utilities/helpers';
 import { IntentRequest } from 'ask-sdk-model';
 import { getNumberDescription, getDateNumber } from '../../utilities/numerology'
 
-
 const GetDateNumberHandler: RequestHandler = {
   canHandle(handlerInput: HandlerInput) {
     return isIntent(handlerInput, IntentTypes.GetDateNumber);

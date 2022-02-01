@@ -10,7 +10,6 @@ import StopIntentHandler from './requests/intents/Stop';
 import CancelIntentHandler from './requests/intents/Cancel';
 import GetDateNumberIntentHandler from './requests/intents/GetDateNumber';
 
-
 export const handler = SkillBuilders.custom()
   .addRequestHandlers(
     LaunchIntentHandler,

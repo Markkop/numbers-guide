@@ -1,4 +1,3 @@
-
 /* eslint-disable max-len */
 const numberDescription: Record<number, string> = {
   1: 'As pessoas que nasceram sob a influência da energia do número 1 possuem um instinto de liderança nato. São pessoas dadas à criatividade, ambiciosas e, por isso, podem ter traços de autoritarismo e egocentrismo aflorados. Estão sempre à frente dos projetos que se propõem a fazer, e podem ter dificuldades em aceitar sugestões.',
