@@ -32,7 +32,15 @@
             "qual é a numerologia de {date}",
             "qual é a numerologia para {date}",
             "qual é o número para {date}",
-            "qual é o número de {date}"
+            "qual é o número de {date}",
+            "me diga qual é a numerologia de {date}",
+            "me diga qual é a numerologia para {date}",
+            "me diga qual é o número para {date}",
+            "me diga qual é o número de {date}",
+            "fale qual é a numerologia de {date}",
+            "fale qual é a numerologia para {date}",
+            "fale qual é o número para {date}",
+            "fale qual é o número de {date}"
           ]
         }
       ],
