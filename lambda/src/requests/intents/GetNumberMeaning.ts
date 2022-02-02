@@ -13,7 +13,9 @@ const GetNumberMeaningHandler: RequestHandler = {
     const providedNumber = requestAttributes.slots.number.value
     const resultedNumber = splitAndSumNumbers(providedNumber)
     const meaning = getNumberMeaning(Number(resultedNumber));
-    const speakOutput = `${t(Strings.GET_NUMBER)}${resultedNumber}. ${meaning}`;
+    const hasMultipleAlgarisms = String(providedNumber).length > 1
+    const multipleAlgarismsOutput = `${t(Strings.GET_NUMBER)}${resultedNumber}. ${meaning}`;
+    const speakOutput = hasMultipleAlgarisms ? multipleAlgarismsOutput : meaning
 
     return handlerInput.responseBuilder
       .speak(speakOutput)
