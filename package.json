@@ -7,7 +7,8 @@
     "test": "npm run test --prefix lambda",
     "start": "npm run compile --prefix lambda && ask run",
     "dialog:date": "ask dialog -r dialog-replays/date-number.json",
-    "dialog:number": "ask dialog -r dialog-replays/number.json"
+    "dialog:number": "ask dialog -r dialog-replays/number.json",
+    "push": "git push origin master && git push github master"
   },
   "repository": {
     "type": "git",
