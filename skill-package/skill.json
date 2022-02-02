@@ -3,10 +3,11 @@
     "publishingInformation": {
       "locales": {
         "pt-BR": {
-          "summary": "Descubra o número que representa uma data e o seu significado",
+          "summary": "Descubra o significado de números e datas",
           "examplePhrases": [
             "Alexa, abra Guia dos Números e me diga qual o número de 16 de Maio de 1962",
-            "Alexa, inicie Guia dos Números e pergunte o número de amanhã"
+            "Alexa, inicie Guia dos Números e pergunte o número de amanhã",
+            "Alexa, abra Guia dos Números e fale o significado para o número 947"
           ],
           "keywords": [
             "numerologia",
@@ -19,7 +20,7 @@
             "guia"
           ],
           "name": "Guia dos Números",
-          "description": "Peça o número para uma data e receba o seu significado",
+          "description": "Descubra o significado de números e datas",
           "smallIconUri": "file://assets/images/pt-BR_smallIconUri.png",
           "largeIconUri": "file://assets/images/pt-BR_largeIconUri.png"
         }
@@ -29,7 +30,7 @@
         "isActive": false
       },
       "isAvailableWorldwide": true,
-      "testingInstructions": "It\u0027s a simple skill that converts a date to a number and tells a brief description about that number.\nFor testing, simple ask Alexa the example phrases such as \"Alexa, abra Guia dos Números e pergunte qual o número para 17 de Abril de 2020\" (only in portuguese currently).\nNote: it does not collect the birthdate or any other information from the user, it only sums the numbers from any date provided. For this reason, I don\u0027t believe it needs a privacy policy",
+      "testingInstructions": "It\u0027s a skill that converts a date or a fullnumber to a numerology number and gets the meaning of it.\nFor testing, simple ask Alexa the example phrases such as \"Alexa, abra Guia dos Números e pergunte qual o número para 17 de Abril de 2020\" (only in portuguese currently).\nNote: it does not collect the birthdate or any other information from the user, it only sums the numbers from any date or number provided. For this reason, I don\u0027t believe it needs a privacy policy",
       "category": "KNOWLEDGE_AND_TRIVIA",
       "distributionMode": "PUBLIC",
       "distributionCountries": []

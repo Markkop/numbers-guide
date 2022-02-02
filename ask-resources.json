@@ -11,12 +11,7 @@
         }
       },
       "skillInfrastructure": {
-        "type": "@ask-cli/hosted-skill-deployer",
-        "userConfig": {
-          "runtime": "nodejs14.x",
-          "handler": "dist/index.handler",
-          "awsRegion": "us-east-1"
-        }
+        "type": "@ask-cli/hosted-skill-deployer"
       }
     }
   }
