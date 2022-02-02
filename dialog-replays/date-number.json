@@ -1,0 +1,9 @@
+{
+  "skillId":"amzn1.ask.skill.316649f9-4d83-464f-a085-57620934aef1",
+  "locale": "pt-BR",
+  "type": "text",
+  "userInput": [
+    "abra o guia dos números e qual é o número de hoje",
+    ".quit"
+  ]
+}

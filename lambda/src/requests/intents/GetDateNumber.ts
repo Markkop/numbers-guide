@@ -10,9 +10,9 @@ const GetDateNumberHandler: RequestHandler = {
     return isIntent(handlerInput, IntentTypes.GetDateNumber);
   },
   handle(handlerInput: HandlerInput) {
-    const request = handlerInput.requestEnvelope.request as IntentRequest
-    const slotValue = request.intent.slots.date.value;
-    const number = getDateNumber(slotValue);
+    const requestAttributes = handlerInput.attributesManager.getRequestAttributes()
+    const date = requestAttributes.date.value
+    const number = getDateNumber(date);
     const description = getNumberDescription(number);
     const speakOutput = `${t(Strings.GET_NUMBER)}${number}. ${description}`;
 

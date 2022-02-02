@@ -9,6 +9,8 @@ const GetDateNumberHandler = {
         return (0, helpers_1.isIntent)(handlerInput, constants_1.IntentTypes.GetDateNumber);
     },
     handle(handlerInput) {
+        const requestAttributes = handlerInput.attributesManager.getRequestAttributes();
+        console.log(requestAttributes);
         const request = handlerInput.requestEnvelope.request;
         const slotValue = request.intent.slots.date.value;
         const number = (0, numerology_1.getDateNumber)(slotValue);
