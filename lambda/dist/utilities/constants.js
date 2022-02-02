@@ -16,7 +16,8 @@ var IntentTypes;
     IntentTypes["Fallback"] = "AMAZON.FallbackIntent";
     IntentTypes["About"] = "AboutIntent";
     IntentTypes["UnavailableIntent"] = "UnavailableIntent";
-    IntentTypes["GetDateNumber"] = "GetDateNumberIntent";
+    IntentTypes["GetDateMeaning"] = "GetDateMeaningIntent";
+    IntentTypes["GetNumberMeaning"] = "GetNumberMeaningIntent";
 })(IntentTypes = exports.IntentTypes || (exports.IntentTypes = {}));
 var LocaleTypes;
 (function (LocaleTypes) {
@@ -31,5 +32,6 @@ var Strings;
     Strings["ABOUT"] = "ABOUT";
     Strings["UNAVAILABLE_INTENT"] = "UNAVAILABLE_INTENT";
     Strings["GET_NUMBER"] = "GET_NUMBER";
+    Strings["GET_DATE_NUMBER"] = "GET_DATE_NUMBER";
 })(Strings = exports.Strings || (exports.Strings = {}));
 //# sourceMappingURL=constants.js.map

@@ -12,7 +12,8 @@ export enum IntentTypes {
   Fallback = 'AMAZON.FallbackIntent',
   About = 'AboutIntent',
   UnavailableIntent = 'UnavailableIntent',
-  GetDateNumber = 'GetDateNumberIntent'
+  GetDateMeaning = 'GetDateMeaningIntent',
+  GetNumberMeaning = 'GetNumberMeaningIntent',
 }
 
 export enum LocaleTypes {
@@ -27,4 +28,5 @@ export enum Strings {
   ABOUT = 'ABOUT',
   UNAVAILABLE_INTENT = 'UNAVAILABLE_INTENT',
   GET_NUMBER = 'GET_NUMBER',
+  GET_DATE_NUMBER = 'GET_DATE_NUMBER',
 }

@@ -9,7 +9,8 @@ import HelpIntentHandler from './requests/intents/Help';
 import FallbackIntentHandler from './requests/intents/Fallback';
 import StopIntentHandler from './requests/intents/Stop';
 import CancelIntentHandler from './requests/intents/Cancel';
-import GetDateNumberIntentHandler from './requests/intents/GetDateNumber';
+import GetDateMeaningIntentHandler from './requests/intents/GetDateMeaning';
+import GetNumberMeaningIntentHandler from './requests/intents/GetNumberMeaning';
 
 export const handler = SkillBuilders.custom()
   .addRequestHandlers(
@@ -20,7 +21,8 @@ export const handler = SkillBuilders.custom()
     CancelIntentHandler,
     SessionEndedIntentHandler,
     ExceptionEncounteredIntentHandler,
-    GetDateNumberIntentHandler
+    GetDateMeaningIntentHandler,
+    GetNumberMeaningIntentHandler
   )
   .addErrorHandlers(ErrorProcessor)
   .addRequestInterceptors(
