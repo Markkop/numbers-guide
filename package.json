@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test --prefix lambda",
-    "start": "npm run compile --prefix lambda && ask run",
-    "deploy": "./scripts/script-deploy.sh"
+    "start": "npm run compile --prefix lambda && ask run"
   },
   "repository": {
     "type": "git",
