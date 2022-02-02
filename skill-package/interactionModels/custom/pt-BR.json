@@ -28,22 +28,30 @@
             }
           ],
           "samples": [
+            "{date}", 
+            "dia {date}",
             "número de {date}",
             "qual é a numerologia de {date}",
             "qual é a numerologia para {date}",
             "qual é o número para {date}",
             "qual é o número de {date}",
             "qual é o número da data {date}",
+            "qual é o significado do dia {date}",
+            "qual é o significado de {date}",
             "me diga qual é a numerologia de {date}",
             "me diga qual é a numerologia para {date}",
             "me diga qual é o número para {date}",
             "me diga qual é o número de {date}",
             "me diga qual é o número da data {date}",
+            "me diga qual é o significado do dia {date}",
+            "me diga qual é o significado de {date}",
             "fale qual é a numerologia de {date}",
             "fale qual é a numerologia para {date}",
             "fale qual é o número para {date}",
             "fale qual é o número de {date}",
-            "fale qual é o número da data {date}"
+            "fale qual é o número da data {date}",
+            "fale qual é o significado do dia {date}",
+            "fale qual é o significado de {date}","fale o significado de {number}"
           ]
         },
         {
@@ -55,41 +63,38 @@
             }
           ],
           "samples": [
+            "{number}",
+            "número {number}",
             "significado de {number}",
             "significado do {number}",
             "significado do número {number}",
             "significado para {number}",
             "significado para o número {number}",
             "significado para número {number}",
-
             "me diga qual é o significado de {number}",
             "me diga qual é o significado do {number}",
             "me diga qual é o significado do número {number}",
             "me diga qual é o significado para {number}",
             "me diga qual é o significado para o número {number}",
             "me diga qual é o significado para número {number}",
-
             "fale qual é o significado de {number}",
             "fale qual é o significado do {number}",
             "fale qual é o significado do número {number}",
             "fale qual é o significado para {number}",
             "fale qual é o significado para o número {number}",
             "fale qual é o significado para número {number}",
-
             "qual é o significado de {number}",
             "qual é o significado do {number}",
             "qual é o significado do número {number}",
             "qual é o significado para {number}",
             "qual é o significado para o número {number}",
             "qual é o significado para número {number}",
-
             "fale o significado de {number}",
             "fale o significado do {number}",
             "fale o significado do número {number}",
             "fale o significado para {number}",
             "fale o significado para o número {number}",
             "fale o significado para número {number}",
-
             "o que o número {number} representa",
             "o que o número {number} quer dizer",
             "o que o número {number} indica",
