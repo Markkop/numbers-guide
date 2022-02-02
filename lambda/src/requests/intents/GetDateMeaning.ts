@@ -2,7 +2,7 @@ import { IntentTypes, Strings } from '../../utilities/constants';
 import { HandlerInput, RequestHandler } from "ask-sdk-core";
 import { t } from 'i18next';
 import { isIntent } from '../../utilities/helpers';
-import { getDateMeaningMeaning, getDateMeaning } from '../../utilities/numerology'
+import { getDateNumberRepresentation, getDateMeaning } from '../../utilities/numerology'
 
 const GetDateMeaningHandler: RequestHandler = {
   canHandle(handlerInput: HandlerInput) {
@@ -10,9 +10,9 @@ const GetDateMeaningHandler: RequestHandler = {
   },
   handle(handlerInput: HandlerInput) {
     const requestAttributes = handlerInput.attributesManager.getRequestAttributes()
-    const date = requestAttributes.date.value
-    const number = getDateMeaning(date);
-    const meaning = getDateMeaningMeaning(number);
+    const date = requestAttributes.slots.date.value
+    const number = getDateNumberRepresentation(date);
+    const meaning = getDateMeaning(number);
     const speakOutput = `${t(Strings.GET_DATE_NUMBER)}${number}. ${meaning}`;
 
     return handlerInput.responseBuilder

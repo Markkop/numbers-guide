@@ -30,7 +30,7 @@ const numberMeaning: Record<number, string> = {
  * @param { Number } number
  * @returns { String }
  */
-export function getDateMeaningMeaning(number: number): string {
+export function getDateMeaning(number: number): string {
   return dateNumberMeaning[number];
 }
 
@@ -49,7 +49,7 @@ export function getNumberMeaning(number: number): string {
  * @param { tring } numberText 
  * @returns { String }
  */
- function splitAndSumNumbers(numberText: string): string {
+ export function splitAndSumNumbers(numberText: string): string {
   const splittedNumbers = numberText.split('').map(Number)
   const sum = String(splittedNumbers.reduce((sum: number, number: number) => sum + number, 0))
   if (sum.length === 1) {
@@ -63,7 +63,7 @@ export function getNumberMeaning(number: number): string {
 * @param { String } date such as 2021-12-19
 * @returns { Number } 
 */
-export function getDateMeaning(date: string) {
+export function getDateNumberRepresentation(date: string) {
   const dateNumbers = date.replace(/\D/g, '')
   const sum = splitAndSumNumbers(dateNumbers)
   return Number(sum)   

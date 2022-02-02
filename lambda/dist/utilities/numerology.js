@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getDateMeaning = exports.getNumberMeaning = exports.getDateMeaningMeaning = void 0;
+exports.getDateNumberRepresentation = exports.splitAndSumNumbers = exports.getNumberMeaning = exports.getDateMeaning = void 0;
 /* eslint-disable max-len */
 const dateNumberMeaning = {
     1: 'As pessoas que nasceram sob a influência da energia do número 1 possuem um instinto de liderança nato. São pessoas dadas à criatividade, ambiciosas e, por isso, podem ter traços de autoritarismo e egocentrismo aflorados. Estão sempre à frente dos projetos que se propõem a fazer, e podem ter dificuldades em aceitar sugestões.',
@@ -31,10 +31,10 @@ const numberMeaning = {
  * @param { Number } number
  * @returns { String }
  */
-function getDateMeaningMeaning(number) {
+function getDateMeaning(number) {
     return dateNumberMeaning[number];
 }
-exports.getDateMeaningMeaning = getDateMeaningMeaning;
+exports.getDateMeaning = getDateMeaning;
 /**
  * Gets a number meaning
  * @param { Number } number
@@ -58,15 +58,16 @@ function splitAndSumNumbers(numberText) {
     }
     return splitAndSumNumbers(sum);
 }
+exports.splitAndSumNumbers = splitAndSumNumbers;
 /**
 * Gets a single number for a given string date
 * @param { String } date such as 2021-12-19
 * @returns { Number }
 */
-function getDateMeaning(date) {
+function getDateNumberRepresentation(date) {
     const dateNumbers = date.replace(/\D/g, '');
     const sum = splitAndSumNumbers(dateNumbers);
     return Number(sum);
 }
-exports.getDateMeaning = getDateMeaning;
+exports.getDateNumberRepresentation = getDateNumberRepresentation;
 //# sourceMappingURL=numerology.js.map
