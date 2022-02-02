@@ -1,4 +1,4 @@
-const {getDateNumber} = require('../src/utilities/numerology');
+import { getDateNumber } from '../src/utilities/numerology';
 
 describe('getDateNumber', () => {
   it('gets the number for 2021-12-01', () => {
