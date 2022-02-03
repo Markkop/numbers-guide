@@ -9,6 +9,7 @@ const LaunchRequest = {
     },
     handle(handlerInput) {
         const speakOutput = (0, i18next_1.t)(constants_1.Strings.LAUNCH);
+        handlerInput.responseBuilder.withSimpleCard((0, i18next_1.t)(constants_1.Strings.SKILL_NAME), speakOutput);
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)

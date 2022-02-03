@@ -14,6 +14,7 @@ const GetDateMeaningHandler: RequestHandler = {
     const number = getDateNumberRepresentation(date);
     const meaning = getDateMeaning(number);
     const speakOutput = `${t(Strings.GET_DATE_NUMBER)}${number}. ${meaning}`;
+    handlerInput.responseBuilder.withSimpleCard(date, meaning)
 
     return handlerInput.responseBuilder
       .speak(speakOutput)

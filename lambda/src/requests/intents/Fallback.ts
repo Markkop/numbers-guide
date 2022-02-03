@@ -9,6 +9,7 @@ const FallbackIntentHandler: RequestHandler = {
   },
   handle(handlerInput) {
     const speechText = t(Strings.FALLBACK);
+    handlerInput.responseBuilder.withSimpleCard(t(Strings.SKILL_NAME), speechText)
 
     return handlerInput.responseBuilder
       .speak(speechText)

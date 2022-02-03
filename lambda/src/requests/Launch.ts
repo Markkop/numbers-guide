@@ -9,6 +9,7 @@ const LaunchRequest: RequestHandler = {
   },
   handle(handlerInput: HandlerInput) {
     const speakOutput = t(Strings.LAUNCH);
+    handlerInput.responseBuilder.withSimpleCard(t(Strings.SKILL_NAME), speakOutput)
 
     return handlerInput.responseBuilder
       .speak(speakOutput)

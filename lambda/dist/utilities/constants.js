@@ -33,5 +33,6 @@ var Strings;
     Strings["UNAVAILABLE_INTENT"] = "UNAVAILABLE_INTENT";
     Strings["GET_NUMBER"] = "GET_NUMBER";
     Strings["GET_DATE_NUMBER"] = "GET_DATE_NUMBER";
+    Strings["SKILL_NAME"] = "SKILL_NAME";
 })(Strings = exports.Strings || (exports.Strings = {}));
 //# sourceMappingURL=constants.js.map

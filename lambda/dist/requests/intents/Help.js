@@ -9,6 +9,7 @@ const AboutIntentHandler = {
     },
     handle(handlerInput) {
         const speechText = (0, i18next_1.t)(constants_1.Strings.HELP);
+        handlerInput.responseBuilder.withSimpleCard((0, i18next_1.t)(constants_1.Strings.SKILL_NAME), speechText);
         return handlerInput.responseBuilder
             .speak(speechText)
             .reprompt(speechText)

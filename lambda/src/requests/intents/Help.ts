@@ -9,6 +9,8 @@ const AboutIntentHandler: RequestHandler = {
   },
   handle(handlerInput) {
     const speechText = t(Strings.HELP);
+    handlerInput.responseBuilder.withSimpleCard(t(Strings.SKILL_NAME), speechText)
+
 
     return handlerInput.responseBuilder
       .speak(speechText)

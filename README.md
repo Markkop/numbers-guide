@@ -1,9 +1,12 @@
 # 🔮 Numbers' Guide
 
-This is a pretty simple Alexa Skill that calculates a number for a given date (and perhaps a name in the future) and retrieves a description for it.  
-Currently it's only available in pt-BR.
+
+This Amazon Alexa Skill computes the numerology number for a date or a multiple digits number and retrives the meaning for it.  
+It's only available in pt-BR.
 
 # Get the Skill
+
+![amazon store printscreen](https://user-images.githubusercontent.com/16388408/152383120-b92b08a7-725b-4996-97cd-ebe1553e3464.png)
 
 https://www.amazon.com.br/Marcelo-Kopmann-Guia-dos-N%C3%BAmeros/dp/B08VWGQ7J3/
 
@@ -12,6 +15,7 @@ https://www.amazon.com.br/Marcelo-Kopmann-Guia-dos-N%C3%BAmeros/dp/B08VWGQ7J3/
 ```
 "Alexa, abra Guida dos Números e pergunte qual o número de 16 de Maio de 1962"
 "Alexa, pergunte Guida dos Números qual o número de hoje
+"Alexa, abra Guia dos Números e fale o significado para o número 947"
 ```
 
 # How to develop

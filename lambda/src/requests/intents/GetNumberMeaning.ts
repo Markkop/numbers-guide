@@ -16,6 +16,7 @@ const GetNumberMeaningHandler: RequestHandler = {
     const hasMultipleAlgarisms = String(providedNumber).length > 1
     const multipleAlgarismsOutput = `${t(Strings.GET_NUMBER)}${resultedNumber}. ${meaning}`;
     const speakOutput = hasMultipleAlgarisms ? multipleAlgarismsOutput : meaning
+    handlerInput.responseBuilder.withSimpleCard(providedNumber, speakOutput)
 
     return handlerInput.responseBuilder
       .speak(speakOutput)
